@@ -1,6 +1,8 @@
 const dotenv = require("dotenv");
 dotenv.config();
 
+const PORT = process.env.PORT || 8000;
+
 const express = require("express");
 const bodyParser = require("body-parser");
 const bizSdk = require("facebook-nodejs-business-sdk");
@@ -34,6 +36,6 @@ app.get("/", async (request, response) => {
   }
 });
 
-app.listen(8000,()=>{
+app.listen(PORT,()=>{
     console.log('Listening on port 8000')
 })
